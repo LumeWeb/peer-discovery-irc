@@ -6,10 +6,10 @@ import { ripemd160 } from "@noble/hashes/ripemd160";
 import { sha256 } from "@noble/hashes/sha256";
 import { bytesToHex } from "@noble/hashes/utils";
 const hash160 = (data) => ripemd160(sha256(data));
-export default async (pubkey, options = {}) => {
+export default async (pubkey, options = { host: "irc.liberta.casa" }) => {
     let ircPubKey = await ed.getPublicKey(ed.utils.randomPrivateKey());
     let client = new IrcClient(undefined, bytesToHex(hash160(ircPubKey)).substring(0, 15), {
-        host: "irc.liberta.casa",
+        host: options.host,
         port: 6697,
         secure: true,
         channels: ["#lumeweb"],
