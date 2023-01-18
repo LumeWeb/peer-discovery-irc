@@ -13,6 +13,7 @@ export default async (pubkey, options = { host: "irc.liberta.casa" }) => {
         port: 6697,
         secure: true,
         channels: ["#lumeweb"],
+        realName: "lumeweb-client",
     });
     client.connect();
     await new Promise((resolve) => {
