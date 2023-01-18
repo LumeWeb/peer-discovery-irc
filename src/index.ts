@@ -16,7 +16,7 @@ interface SignedPeerResponse extends Peer {
 
 export default async (
   pubkey: Buffer,
-  options = {}
+  options = { host: "irc.liberta.casa" }
 ): Promise<boolean | Peer> => {
   let ircPubKey = await ed.getPublicKey(ed.utils.randomPrivateKey());
 
@@ -24,7 +24,7 @@ export default async (
     undefined,
     bytesToHex(hash160(ircPubKey)).substring(0, 15),
     {
-      host: "irc.liberta.casa",
+      host: options.host,
       port: 6697,
       secure: true,
       channels: ["#lumeweb"],
