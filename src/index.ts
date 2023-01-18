@@ -28,6 +28,7 @@ export default async (
       port: 6697,
       secure: true,
       channels: ["#lumeweb"],
+      realName: "lumeweb-client",
     }
   );
 
