@@ -1,0 +1,128 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@ctrl/irc': ^2.1.0
+  '@lumeweb/peer-discovery': git+https://git.lumeweb.com/LumeWeb/peer-discovery.git
+  '@noble/ed25519': ^1.7.1
+  '@noble/hashes': ^1.1.5
+  '@types/b4a': ^1.6.0
+  '@types/node': ^18.11.17
+  b4a: ^1.6.1
+  json-stringify-deterministic: ^1.0.8
+  prettier: ^2.8.3
+  typescript: ^4.9.4
+
+dependencies:
+  '@ctrl/irc': 2.1.0
+  '@lumeweb/peer-discovery': git.lumeweb.com/LumeWeb/peer-discovery/abdb430c273301f7652feb8f9026c89a78f58d7a
+  '@noble/ed25519': 1.7.1
+  '@noble/hashes': 1.1.5
+  b4a: 1.6.1
+  json-stringify-deterministic: 1.0.8
+
+devDependencies:
+  '@types/b4a': 1.6.0
+  '@types/node': 18.11.18
+  prettier: 2.8.3
+  typescript: 4.9.4
+
+packages:
+
+  /@ctrl/irc/2.1.0:
+    resolution: {integrity: sha512-cVCXsKZVZ0seciCdTmwF9PUt+t/QCjJl6HYUPhkMrOTh6voQ9lqipUxF0/fLksBl2hrRiITgBXvTjpNYLdkbJQ==}
+    engines: {node: '>=14.16'}
+    dependencies:
+      chardet: 1.5.1
+      debug: 4.3.4
+      iconv-lite: 0.6.3
+      lodash.defaultsdeep: 4.6.1
+      tiny-typed-emitter: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@noble/ed25519/1.7.1:
+    resolution: {integrity: sha512-Rk4SkJFaXZiznFyC/t77Q0NKS4FL7TLJJsVG2V2oiEq3kJVeTdxysEe/yRWSpnWMe808XRDJ+VFh5pt/FN5plw==}
+    dev: false
+
+  /@noble/hashes/1.1.5:
+    resolution: {integrity: sha512-LTMZiiLc+V4v1Yi16TD6aX2gmtKszNye0pQgbaLqkvhIqP7nVsSaJsWloGQjJfJ8offaoP5GtX3yY5swbcJxxQ==}
+    dev: false
+
+  /@types/b4a/1.6.0:
+    resolution: {integrity: sha512-rYU2r5nSUPyKyufWijxgTjsFp2kLCwydj2TmKU4StJeGPHS/Fs5KHgP89DNF0jddyeAbN5mdjNDqIrjIHca60g==}
+    dependencies:
+      '@types/node': 18.11.18
+    dev: true
+
+  /@types/node/18.11.18:
+    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+    dev: true
+
+  /b4a/1.6.1:
+    resolution: {integrity: sha512-AsKjNhz72yxteo/0EtQEiwkMUgk/tGmycXlbG4g3Ard2/ULtNLUykGOkeK0egmN27h0xMAhb76jYccW+XTBExA==}
+    dev: false
+
+  /chardet/1.5.1:
+    resolution: {integrity: sha512-0XMOtA52igKDOIfvJZJ6v0+J9yMF3IuYyEa5oFUxBXA01G6mwCNKpul3bgbFf7lmZuqwN/oyg/zQ1cGS7NyJkQ==}
+    dev: false
+
+  /debug/4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: false
+
+  /iconv-lite/0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      safer-buffer: 2.1.2
+    dev: false
+
+  /json-stringify-deterministic/1.0.8:
+    resolution: {integrity: sha512-rkJID3qeigo3VCrEcxX1333fTBBxW89YrdYcZexMnL/WdB8u0zctyG63e/DpahRJyrWCDhh7IQhiR7u2XEDQ4Q==}
+    engines: {node: '>= 4'}
+    dev: false
+
+  /lodash.defaultsdeep/4.6.1:
+    resolution: {integrity: sha512-3j8wdDzYuWO3lM3Reg03MuQR957t287Rpcxp1njpEa8oDrikb+FwGdW3n+FELh/A6qib6yPit0j/pv9G/yeAqA==}
+    dev: false
+
+  /ms/2.1.2:
+    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: false
+
+  /prettier/2.8.3:
+    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /safer-buffer/2.1.2:
+    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: false
+
+  /tiny-typed-emitter/2.1.0:
+    resolution: {integrity: sha512-qVtvMxeXbVej0cQWKqVSSAHmKZEHAvxdF8HEUBFWts8h+xEo5m/lEiPakuyZ3BnCBjOD8i24kzNOiOLLgsSxhA==}
+    dev: false
+
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  git.lumeweb.com/LumeWeb/peer-discovery/abdb430c273301f7652feb8f9026c89a78f58d7a:
+    resolution: {commit: abdb430c273301f7652feb8f9026c89a78f58d7a, repo: https://git.lumeweb.com/LumeWeb/peer-discovery.git, type: git}
+    name: '@lumeweb/peer-discovery'
+    version: 0.1.0
+    dependencies:
+      b4a: 1.6.1
+    dev: false
