@@ -1,8 +1,5 @@
 {
     "preset": [
         "@lumeweb/node-library-preset"
-    ],
-    "config": {
-        "official": true
-    }
+    ]
 }
