@@ -1,8 +1,8 @@
-import type { Peer } from "@lumeweb/peer-discovery";
+import type { Peer } from "@lumeweb/libpeerdiscovery";
 import { IrcClient } from "@ctrl/irc";
 import jsonStringify from "json-stringify-deterministic";
 import b4a from "b4a";
-import * as ed from "@noble/ed25519";
+import { ed25519 } from "@noble/curves/ed25519";
 import { ripemd160 } from "@noble/hashes/ripemd160";
 import { sha256 } from "@noble/hashes/sha256";
 import { bytesToHex } from "@noble/hashes/utils";
@@ -16,12 +16,12 @@ interface SignedPeerResponse extends Peer {
 
 export default async (
   pubkey: Buffer,
-  options = { host: "irc.liberta.casa" }
+  options = { host: "irc.liberta.casa" },
 ): Promise<boolean | Peer> => {
-  let ircPubKey = await ed.getPublicKey(ed.utils.randomPrivateKey());
+  let ircPubKey = ed25519.getPublicKey(ed25519.utils.randomPrivateKey());
 
   let client = new IrcClient(
-    undefined,
+    undefined as any,
     bytesToHex(hash160(ircPubKey)).substring(0, 15),
     {
       host: options.host,
@@ -29,7 +29,7 @@ export default async (
       secure: true,
       channels: ["#lumeweb"],
       realName: "lumeweb-client",
-    }
+    },
   );
 
   client.connect();
@@ -57,11 +57,11 @@ export default async (
 
       const verifyPayload = jsonStringify(verifyData);
       if (
-        !(await ed.verify(
+        !ed25519.verify(
           b4a.from(json.signature, "hex"),
           b4a.from(verifyPayload),
-          pubkey
-        ))
+          pubkey,
+        )
       ) {
         return;
       }
