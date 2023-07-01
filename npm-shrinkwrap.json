@@ -1,12 +1,12 @@
 {
     "name": "@lumeweb/peer-discovery-irc",
-    "version": "0.1.0",
+    "version": "0.0.2-develop.1",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
             "name": "@lumeweb/peer-discovery-irc",
-            "version": "0.1.0",
+            "version": "0.0.2-develop.1",
             "dependencies": {
                 "@ctrl/irc": "^2.1.1",
                 "@lumeweb/libpeerdiscovery": "^0.1.0-develop.1",
