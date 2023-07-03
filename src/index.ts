@@ -4,7 +4,7 @@ import jsonStringify from "json-stringify-deterministic";
 import { ed25519 } from "@noble/curves/ed25519";
 import { ripemd160 } from "@noble/hashes/ripemd160";
 import { sha256 } from "@noble/hashes/sha256";
-import { bytesToHex, hexToBytes } from "@noble/hashes/utils";
+import { bytesToHex, hexToBytes, utf8ToBytes } from "@noble/hashes/utils";
 
 const hash160 = (data: Uint8Array) => ripemd160(sha256(data));
 
@@ -58,7 +58,7 @@ export default async (
       if (
         !ed25519.verify(
           hexToBytes(json.signature as string),
-          hexToBytes(verifyPayload),
+          utf8ToBytes(verifyPayload),
           pubkey,
         )
       ) {
