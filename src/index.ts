@@ -1,11 +1,10 @@
 import type { Peer } from "@lumeweb/libpeerdiscovery";
 import { IrcClient } from "@ctrl/irc";
 import jsonStringify from "json-stringify-deterministic";
-import b4a from "b4a";
 import { ed25519 } from "@noble/curves/ed25519";
 import { ripemd160 } from "@noble/hashes/ripemd160";
 import { sha256 } from "@noble/hashes/sha256";
-import { bytesToHex } from "@noble/hashes/utils";
+import { bytesToHex, hexToBytes } from "@noble/hashes/utils";
 
 const hash160 = (data: Uint8Array) => ripemd160(sha256(data));
 
@@ -38,7 +37,7 @@ export default async (
     client.once("join", resolve);
   });
 
-  client.say("#lumeweb", b4a.toBuffer(pubkey).toString("hex"));
+  client.say("#lumeweb", bytesToHex(pubkey));
 
   return new Promise<Peer>((resolve, reject) => {
     client.on("pm", async (from: string, text: string) => {
@@ -58,8 +57,8 @@ export default async (
       const verifyPayload = jsonStringify(verifyData);
       if (
         !ed25519.verify(
-          b4a.from(json.signature, "hex"),
-          b4a.from(verifyPayload),
+          hexToBytes(json.signature as string),
+          hexToBytes(verifyPayload),
           pubkey,
         )
       ) {
