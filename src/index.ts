@@ -68,5 +68,10 @@ export default async (
       client.end();
       resolve({ host: json.host, port: json.port });
     });
+
+    setTimeout(() => {
+      client.end();
+      reject();
+    }, 1000);
   });
 };
