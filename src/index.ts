@@ -72,6 +72,6 @@ export default async (
     setTimeout(() => {
       client.end();
       reject("irc discovery response timed out");
-    }, 1000);
+    }, 3000);
   });
 };
