@@ -1,3 +1,10 @@
+## [0.0.2-develop.6](https://git.lumeweb.com/LumeWeb/peer-discovery-irc/compare/v0.0.2-develop.5...v0.0.2-develop.6) (2023-07-12)
+
+
+### Bug Fixes
+
+* increase timeout to 3 seconds ([780573a](https://git.lumeweb.com/LumeWeb/peer-discovery-irc/commit/780573aa7d025590dfc8dbedf9aa380d4888bc8a))
+
 ## [0.0.2-develop.5](https://git.lumeweb.com/LumeWeb/peer-discovery-irc/compare/v0.0.2-develop.4...v0.0.2-develop.5) (2023-07-12)
 
 
