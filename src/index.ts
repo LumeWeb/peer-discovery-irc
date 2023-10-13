@@ -17,6 +17,11 @@ export default async (
   pubkey: Buffer,
   options = { host: "irc.liberta.casa" },
 ): Promise<boolean | Peer> => {
+  return {
+    host: "relay1.lumeweb.com",
+    port: 8080,
+  };
+  /*
   let ircPubKey = ed25519.getPublicKey(ed25519.utils.randomPrivateKey());
 
   let client = new IrcClient(
@@ -73,5 +78,5 @@ export default async (
       client.end();
       reject("irc discovery response timed out");
     }, 3000);
-  });
+  });*/
 };
