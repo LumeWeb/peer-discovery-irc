@@ -1,6 +1,6 @@
 {
     "name": "@lumeweb/peer-discovery-irc",
-    "version": "0.0.2-develop.6",
+    "version": "0.0.2-develop.7",
     "main": "lib/index.js",
     "type": "module",
     "repository": {
